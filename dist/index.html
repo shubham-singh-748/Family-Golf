@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP - 3</title>
+    <link rel="stylesheet" href="output.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="module" src="index.js"></script>
+    <style>
+        * {
+            font-family: 'montserrat';
+        }
+
+        #page1 h1::before {
+            content: '';
+            position: absolute;
+            color: #000;
+            top: -6px;
+            left: -6px;
+            -webkit-text-stroke: 2px #95c11e;
+            z-index: -1;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0%)
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        #cards-container #card1:hover {
+            transform: rotate3d(-1, 1, 0, 20deg);
+        }
+
+        #cards-container #card2:hover {
+            transform: rotate3d(-1, 1, 0, 20deg);
+        }
+
+        #cards-container #card3:hover {
+            transform: rotate3d(-1, 1, 0, 20deg);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- navbar -->
+    <div id="nav"
+        class="text-white text-xl flex items-center justify-between w-[100%] px-[5%] font-semibold py-2 z-[100] fixed">
+        <img src="https://www.familygolfonline.com/wp-content/uploads/sites/8555/2022/08/logo-12.png" alt=""
+            class="h-14 w-auto sm:h-24 sm:w-auto">
+        <p>TOPTRACER RANGE</p>
+        <p>GOLF LESSONS</p>
+        <P>ADVENTURE GOLF</P>
+        <p>COFFEE SHOP</p>
+        <p>LEAGUES</p>
+    </div>
+
+    <!-- cursor -->
+    <div id="cursor" class="h-[15px] w-[15px] bg-[#95c11e] rounded-full fixed z-[99]"></div>
+
+    <div id="cursor-blur" class="h-[100px] w-[100px] bg-[#96c11ec4] rounded-full fixed blur-md"></div>
+
+    <!-- video -->
+
+
+
+    <video src="https://sidcupfamilygolf.com/wp-content/uploads/2023/02/hero.mp4" autoplay muted loop
+        class="w-[100%] h-[100%] object-cover fixed z-[-1]"></video>
+
+    <!-- main content -->
+    <div id="main" class="text-white relative bg-[rgba(0,0,0,0.4)]">
+        <div id="page1" class="min-h-[100vh] w-[100%] relative flex items-center justify-center flex-col">
+
+            <h1 class="uppercase text-9xl relative" style="font-weight: 900;">eat. drink. play</h1>
+            <p class="uppercase text-3xl mt-5" style="font-weight: 800;">Welcome to Sidcup Family Golf!</p>
+            <p class="text-xl font-light mt-3 w-[30%] text-center">Sidcup Family Golf is a multipurpose golf facility
+                located in Sidcup, South East London. Passionate about technology,
+                player development and making golf fun and accessible to everyone.</p>
+        </div>
+
+        <div id="page2" class="h-[100vh] w-[100%]">
+            <div id="scroller " class="whitespace-nowrap overflow-hidden ">
+                <div id="scroller-in" class="inline-block whitespace-nowrap overflow-hidden"
+                    style="animation-name: scroll; animation-timing-function: linear; animation-duration: 10s; animation-iteration-count: infinite;">
+                    <h1 class="inline-block text-6xl mr-10 text-transparent hover:text-[#95c11e]"
+                        style="font-weight: 900; font-family: 'gilroy'; -webkit-text-stroke: 1px #95c11e;">TOPTRACER
+                        RANGE</h1>
+                    <h1 class="inline-block text-6xl mr-10 text-transparent hover:text-[#95c11e]"
+                        style="font-weight: 900; font-family: 'gilroy'; -webkit-text-stroke: 1px #95c11e;">GOLF LESSONS
+                    </h1>
+                    <h1 class="inline-block text-6xl mr-10 text-transparent hover:text-[#95c11e]"
+                        style="font-weight: 900; font-family: 'gilroy'; -webkit-text-stroke: 1px #95c11e;">ADVENTURE
+                        GOLF</h1>
+                    <h1 class="inline-block text-6xl mr-10 text-transparent hover:text-[#95c11e]"
+                        style="font-weight: 900; font-family: 'gilroy'; -webkit-text-stroke: 1px #95c11e;">COFFEE SHOP
+                    </h1>
+                    <h1 class="inline-block text-6xl mr-10 text-transparent hover:text-[#95c11e]"
+                        style="font-weight: 900; font-family: 'gilroy'; -webkit-text-stroke: 1px #95c11e;">LEAGUES</h1>
+                </div>
+
+                <div id="scroller-in" class="inline-block whitespace-nowrap overflow-hidden"
+                    style="animation-name: scroll; animation-timing-function: linear; animation-duration: 10s; animation-iteration-count: infinite;">
+                    <h1 class="inline-block text-6xl mr-10 text-transparent hover:text-[#95c11e]"
+                        style="font-weight: 900; font-family: 'gilroy'; -webkit-text-stroke: 1px #95c11e;">TOPTRACER
+                        RANGE</h1>
+                    <h1 class="inline-block text-6xl mr-10 text-transparent hover:text-[#95c11e]"
+                        style="font-weight: 900; font-family: 'gilroy'; -webkit-text-stroke: 1px #95c11e;">GOLF LESSONS
+                    </h1>
+                    <h1 class="inline-block text-6xl mr-10 text-transparent hover:text-[#95c11e]"
+                        style="font-weight: 900; font-family: 'gilroy'; -webkit-text-stroke: 1px #95c11e;">ADVENTURE
+                        GOLF</h1>
+                    <h1 class="inline-block text-6xl mr-10 text-transparent hover:text-[#95c11e]"
+                        style="font-weight: 900; font-family: 'gilroy'; -webkit-text-stroke: 1px #95c11e;">COFFEE SHOP
+                    </h1>
+                    <h1 class="inline-block text-6xl mr-10 text-transparent hover:text-[#95c11e]"
+                        style="font-weight: 900; font-family: 'gilroy'; -webkit-text-stroke: 1px #95c11e;">LEAGUES</h1>
+                </div>
+            </div>
+
+            <div id="about-us" class="flex px-[6%] mt-20">
+                <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-about-1.jpg?strip=all&lossy=1&sharp=1&fit=300%2C200&ssl=1"
+                    alt="" class="rounded-lg">
+                <div id="about-us-in" class="text-center">
+                    <p class="text-5xl uppercase" style="font-weight: 900;">about us</p>
+                    <p class="text-xl mt-4 mb-3 px-[3%]">Home to a 46-bay, multi-tier, floodlit driving range, powered
+                        by Toptracer Range technology. Complimented by a practice
+                        green and bunker, coffee shop and American Golf Store. There truly is something for everyone as
+                        we also boast two
+                        outdoor 18-hole dinosaur themed crazy golf courses.</p>
+                    <p class="text-xl">Please note: we are a cashless venue. The range closes at 10pm with last balls at
+                        9pm.</p>
+
+
+                </div>
+                <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-about-2.jpg?strip=all&lossy=1&sharp=1&fit=300%2C200&ssl=1"
+                    alt="" class="rounded-lg">
+            </div>
+
+            <div id="cards-container"
+                class="h-[60vh] flex items-center justify-center gap-52 relative z-[10] overflow-hidden"
+                style="transition: all ease 0.6s;">
+                <div id="card1"
+                    class="h-[80%] w-[24%] rounded-lg bg-[url('https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&fit=1024%2C682&ssl=1')]"
+                    style="background-size: cover; background-position: center;">
+
+                    <div id="overlay"
+                        class="h-[100%] w-[100%] bg-[#95c11e] pt-[160px] px-[30px] opacity-0 hover:opacity-100">
+                        <p class="text-black text-5xl uppercase whitespace-nowrap mb-[20px]" style="font-weight: 800;">
+                            topreacer range</p>
+                        <p class="text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi minus
+                            recusandae nostrum
+                            nemo. Temporibus expedita voluptates at accusamus, possimus reiciendis illo.</p>
+                    </div>
+                </div>
+
+                <div id="card2"
+                    class="h-[80%] w-[24%] rounded-lg bg-[url('https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&fit=1024%2C1024&ssl=1')]"
+                    style="background-size: cover; background-position: center;">
+
+                    <div id="overlay"
+                        class="h-[100%] w-[100%] bg-[#95c11e] pt-[160px] px-[30px] opacity-0 hover:opacity-100">
+                        <p class="text-black text-5xl uppercase whitespace-nowrap mb-[20px]" style="font-weight: 800;">
+                            adventure golf</p>
+                        <p class="text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi minus
+                            recusandae nostrum
+                            nemo. Temporibus
+                            expedita voluptates at accusamus, possimus reiciendis illo.</p>
+                    </div>
+                </div>
+
+                <div id="card3"
+                    class="h-[80%] w-[24%] rounded-lg bg-[url('https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&fit=1024%2C682&ssl=1')]"
+                    style="background-size: cover; background-position: center;">
+
+                    <div id="overlay"
+                        class="h-[100%] w-[100%] bg-[#95c11e] pt-[160px] px-[30px] opacity-0 hover:opacity-100"
+                        style="transition: all ease 0.6s;">
+                        <p class="text-black text-5xl uppercase whitespace-nowrap mb-[20px]" style="font-weight: 800;">
+                            golf lessons</p>
+                        <p class="text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi minus
+                            recusandae nostrum
+                            nemo. Temporibus
+                            expedita voluptates at accusamus, possimus reiciendis illo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page3" class="h-[100vh] w-[100%] bg-black flex items-center justify-center relative">
+            <h3 class="text-[30px] text-center" style="font-weight: 700; width: 65%; line-height: 45px;">Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Quo, quasi. Aperiam ad maxime rem.</h3>
+
+            <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-left.svg" alt="" id="col1" class="h-[60px] absolute left-[15%] top-[25%]">
+
+            <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-right.svg" alt="" id="col2" class="h-[60px] absolute right-[15%] bottom-[30%]">
+        </div>
+    </div>
+</body>
+
+</html>
