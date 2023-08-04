@@ -1,3 +1,28 @@
+let menu = document.getElementById('menu')
+let showList = document.querySelector('.list')
+
+menu.addEventListener('click', function () {
+
+    const iconElem = menu.querySelector('i')
+
+    // it checks for current class present bx-menu or not
+    if (iconElem.classList.contains('bx-menu')) {
+
+        iconElem.classList.remove('bx-menu')
+        iconElem.classList.add('bxl-xing')
+        // it remove hidden property which hides list
+        showList.classList.remove('hidden')
+
+    }
+    else {
+
+        iconElem.classList.remove('bxl-xing')
+        iconElem.classList.add('bx-menu')
+        showList.classList.add('hidden')
+
+    }
+})
+
 let crsr = document.querySelector("#cursor")
 let crsrBlur = document.querySelector('#cursor-blur')
 document.addEventListener('mousemove', function (dets) {
@@ -8,22 +33,22 @@ document.addEventListener('mousemove', function (dets) {
     crsrBlur.style.top = dets.y - 40 + 'px'
 })
 
-let h4all = document.querySelectorAll('#nav p')
-h4all.forEach(function (elem) {
-    elem.addEventListener('mouseenter', function () {
-        crsr.style.scale = 3
-        crsr.style.border = '1px solid #fff'
-        crsr.style.backgroundColor = 'transparent'
+// let h4all = document.querySelectorAll('#nav p')
+// h4all.forEach(function (elem) {
+//     elem.addEventListener('mouseenter', function () {
+//         crsr.style.scale = 3
+//         crsr.style.border = '1px solid #fff'
+//         crsr.style.backgroundColor = 'transparent'
 
-    })
+//     })
 
-    elem.addEventListener('mouseleave', function () {
-        crsr.style.scale = 3
-        crsr.style.border = '0px solid #95c11e'
-        crsr.style.backgroundColor = '#95c11e'
+//     elem.addEventListener('mouseleave', function () {
+//         crsr.style.scale = 3
+//         crsr.style.border = '0px solid #95c11e'
+//         crsr.style.backgroundColor = '#95c11e'
 
-    })
-})
+//     })
+// })
 
 gsap.to('#nav', {
     backgroundColor: 'black',
